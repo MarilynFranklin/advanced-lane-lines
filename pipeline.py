@@ -63,7 +63,7 @@ class Pipeline():
         newwarp = cv2.warpPerspective(color_warp, self.M_inv,
                 (self.image.shape[1], self.image.shape[0]))
         # Combine the result with the original image
-        result = cv2.addWeighted(self.image, 1, newwarp, 0.3, 0)
+        result = cv2.addWeighted(self.undistorted, 1, newwarp, 0.3, 0)
 
         return result
 
