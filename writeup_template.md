@@ -236,7 +236,7 @@ return (camera_center-self.image.shape[1]/2)*self.xm_per_pix
 
 I implemented this step in lines 50 through 68 in my code in `pipeline.py` in the function `draw()`. Here is an example of my result on a test image:
 
-![Lane Area][output_images/fitted-detail.jpg]
+![Lane Area](output_images/fitted-detail.jpg)
 
 ---
 
