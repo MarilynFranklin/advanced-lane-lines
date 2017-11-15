@@ -252,7 +252,7 @@ Here's a [link to my video result](./output1_tracked.mp4)
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-In my first implementation, I had a lot of issues with shaddows and when a black car passes on the right, it seemed to pick up the lanes in the cars reflection.  Theses problems caused the lane area to jitter and at times move far into the right lane.
+In my first implementation, I had a lot of issues with shadows and when a black car passes on the right, it seemed to pick up the lanes in the cars reflection.  Theses problems caused the lane area to jitter and at times move far into the right lane.
 
 In order to fix it, I started to keep track of the previous lines. After fitting a polynomial for a new frame, I diffed it with the previous line by finding the mean squared error. I monitored common mean squared errors and found that it was usually lower than 500, so I picked that number as a threshold.  Whenever the difference went over 500, I would reject the new line and use an average of the last 15 frames.
 
